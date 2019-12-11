@@ -8,7 +8,8 @@
     <title>Timed Quizes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/general.css">
+        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/general.css">
 </head>
 
 <body>
@@ -23,12 +24,29 @@
 
         <div class="jumbotron text-center w-100 h-100 p-0 mb-5">
             <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="lead text-right" id="remaining">Time Remaining: <span id="time-remaining">75</span>
+                        </h1>
 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="bold text-right" id="timesUp" style="display: none;">Time's Up!</h1>
+                    </div>
+                </div>
 
                 <!-- TITLE -->
                 <div class="row">
                     <div class="col-12">
                         <h1 class="display-4">Timed Quizes </h1>
+                        <div> <span id="questions-here"></span></div>
+
+
+
+
 
                     </div>
                 </div>
@@ -54,7 +72,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="./assets/js/app.js"></script>
+    <script src="../js/quiz.js"></script>
 </body>
 
 </html>
