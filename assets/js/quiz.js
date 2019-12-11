@@ -67,7 +67,7 @@ function getQuiz() {
         <h5 class="card-title">${questions[i].question}</h5>
 
         
-        <div class="col-sm-12   text-justify" style="overflow:scroll">
+        <div class="col-sm-12   text-justify" >
         <div class="form-check ">
         <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="0" checked>
         <label class="form-check-label text-capitalize " for="exampleRadios1">
