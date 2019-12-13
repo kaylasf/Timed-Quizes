@@ -8,8 +8,8 @@
     <title>Timed Quizes</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-        <link rel="stylesheet" href="../styles/general.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/general.css">
 </head>
 
 <body>
@@ -42,9 +42,52 @@
                 <div class="row">
                     <div class="col-12">
                         <h1 class="display-4">Timed Quizes </h1>
-                        <div> <span id="questions-here"></span></div>
+
+                        <div class="card mb-4 col-12 " id='cardDisplay'>
 
 
+                            <div class="card-header text-capitalize">
+                                Question <span id="question-title"></span>
+                            </div>
+                            <div class="card-body text-center text-capitalize">
+                                <h5 class="card-title"><span id="card-question"></span></h5>
+
+
+                                <div class="col-sm-12   text-center " id="question-display">
+                                    <div class="form-check ">
+                                        <input class="form-check-input " type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="0" checked>
+                                        <label class="form-check-label text-capitalize " for="exampleRadios1">
+                                            <span id="q0"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check ">
+                                            <input class="form-check-input " type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="1" checked>
+                                            <label class="form-check-label text-capitalize " for="exampleRadios1">
+                                                <span id="q1"></span>
+                                            </label>
+                                        </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input " type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="2" checked>
+                                        <label class="form-check-label text-capitalize " for="exampleRadios1">
+                                            <span id="q2"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input " type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="3" checked>
+                                        <label class="form-check-label text-capitalize " for="exampleRadios1">
+                                            <span id="q3"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <a  class="btn btn-primary" id="submit">Submit<i class="em em-crossed_fingers"
+                                        aria-role="presentation"
+                                        aria-label="HAND WITH INDEX AND MIDDLE FINGERS CROSSED"></i></a>
+                            </div>
+                        </div>
 
 
 
