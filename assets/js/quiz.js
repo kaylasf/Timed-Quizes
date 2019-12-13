@@ -189,10 +189,11 @@ switch (currQ) {
 
 
 
-function check(e){
+// function check(e){
+// console.log(e.target)
+// if
+// }
 
-if()
-}
 // if user selection === questions.answer - correct - no image; push correct answers into array 
 
 //if else- user !=== question.answer= boo image for 3 seconds 
