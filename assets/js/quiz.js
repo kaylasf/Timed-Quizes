@@ -190,7 +190,8 @@ switch (currQ) {
 
 
 function check(e){
-console.log(e.target)
+
+if()
 }
 // if user selection === questions.answer - correct - no image; push correct answers into array 
 
