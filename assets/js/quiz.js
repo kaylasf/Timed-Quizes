@@ -139,7 +139,7 @@ function displayNext() {
 
 subButton.addEventListener("click", function (e) {
  
-check(e)
+// check(e)
     
 switch (currQ) {
     case currQ = questions[0]:
