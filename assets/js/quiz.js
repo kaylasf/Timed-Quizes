@@ -13,9 +13,9 @@ var q2 = document.getElementById('q2')
 var q3 = document.getElementById('q3')
 var questionDisplay = document.getElementById('question-display')
 var cardDisplay = document.getElementById('cardDisplay')
+var checkMe = document.getElementById('checkMe')
 var currQ
 var subButton = document.getElementById('submit')
-
 
 
 // INITIAL FUNCTION
@@ -121,6 +121,28 @@ function getQuiz() {
 
 }
 
+
+
+
+var answerQuestion;
+function checkValue(value) {
+    answerQuestion = value
+}
+
+
+subButton.addEventListener("click", function (e) {
+    if (answerQuestion === undefined) {
+        answerQuestion = 0
+    }
+    getNext()
+    console.log(answerQuestion)
+    // check(e)
+
+    // CHECKBOX ONCLICKS //
+
+
+});
+
 function displayNext() {
     questionTitle.innerHTML = currQ.title
     cardQuestion.innerHTML = currQ.question
@@ -129,77 +151,54 @@ function displayNext() {
     q2.innerHTML = currQ.choices[2]
     q3.innerHTML = currQ.choices[3]
 }
-//GFU: LOOP THROUGH OBJECT??
-//init //displaying 1 Q //create a var 
-//click event 
 
 
-
-
-
-subButton.addEventListener("click", function (e) {
- 
-// check(e)
-    
-switch (currQ) {
-    case currQ = questions[0]:
-        currQ = questions[1]
-        displayNext()
-        break;
+function getNext() {
+    switch (currQ) {
+        case currQ = questions[0]:
+            currQ = questions[1]
+            displayNext()
+            break;
         case currQ = questions[1]:
-        currQ = questions[2]
-        displayNext()
-        break;
+            currQ = questions[2]
+            displayNext()
+            break;
         case currQ = questions[2]:
-        currQ = questions[3]
-        displayNext()
-        break;
+            currQ = questions[3]
+            displayNext()
+            break;
         case currQ = questions[3]:
-        currQ = questions[4]
-        displayNext()
-        break;
+            currQ = questions[4]
+            displayNext()
+            break;
         case currQ = questions[4]:
-        currQ = questions[5]
-        displayNext()
-        break;
+            currQ = questions[5]
+            displayNext()
+            break;
         case currQ = questions[5]:
-        currQ = questions[6]
-        displayNext()
-        break;
+            currQ = questions[6]
+            displayNext()
+            break;
         case currQ = questions[6]:
-        currQ = questions[7]
-        displayNext()
-        break;
+            currQ = questions[7]
+            displayNext()
+            break;
         case currQ = questions[7]:
-        currQ = questions[8]
-        displayNext()
-        break;
+            currQ = questions[8]
+            displayNext()
+            break;
         case currQ = questions[8]:
-        currQ = questions[9]
-        displayNext()
-        break;
+            currQ = questions[9]
+            displayNext()
+            break;
         case currQ = questions[9]:
-        currQ = questions[10]
-        displayNext()
-        break;
-    default:
-        document.getElementById('cardDisplay').setAttribute('style', "display: none");
+            currQ = questions[10]
+            displayNext()
+            break;
+        default:
+            document.getElementById('cardDisplay').setAttribute('style', "display: none");
+    }
 }
-});
-
-
-
-// function check(e){
-// console.log(e.target)
-// if
-// }
-
-// if user selection === questions.answer - correct - no image; push correct answers into array 
-
-//if else- user !=== question.answer= boo image for 3 seconds 
-
-//if on last question and press submit- stop quiz and grab score- 
-// }
 
 
 

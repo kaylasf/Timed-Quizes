@@ -54,36 +54,39 @@
 
 
                                 <div class="col-sm-12   text-center " id="question-display">
-                                    <div class="form-check ">
-                                        <input class="form-check-input " type="radio" name="exampleRadios"
-                                            id="exampleRadios1" value="0" checked>
-                                        <label class="form-check-label text-capitalize " for="exampleRadios1">
-                                            <span id="q0"></span>
-                                        </label>
-                                    </div>
-                                    <div class="form-check ">
-                                            <input class="form-check-input " type="radio" name="exampleRadios"
-                                                id="exampleRadios1" value="1" checked>
-                                            <label class="form-check-label text-capitalize " for="exampleRadios1">
+
+                                    <div id="checkMe">
+                                        <div class="form-check">
+                                            <input class="form-check-input radd " type="radio" name="exampleRadios"
+                                                id="Radio0" value="0" onclick="checkValue(value)" checked>
+                                            <label class="form-check-label text-capitalize " for="Radio1">
+                                                <span id="q0"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input radd " type="radio" name="exampleRadios"
+                                                id="Radio1" value="1" onclick="checkValue(value)">
+                                            <label class="form-check-label text-capitalize " for="Radio2">
                                                 <span id="q1"></span>
                                             </label>
                                         </div>
-                                    <div class="form-check ">
-                                        <input class="form-check-input " type="radio" name="exampleRadios"
-                                            id="exampleRadios1" value="2" checked>
-                                        <label class="form-check-label text-capitalize " for="exampleRadios1">
-                                            <span id="q2"></span>
-                                        </label>
-                                    </div>
-                                    <div class="form-check ">
-                                        <input class="form-check-input " type="radio" name="exampleRadios"
-                                            id="exampleRadios1" value="3" checked>
-                                        <label class="form-check-label text-capitalize " for="exampleRadios1">
-                                            <span id="q3"></span>
-                                        </label>
+                                        <div class="form-check ">
+                                            <input class="form-check-input radd " type="radio" name="exampleRadios"
+                                                id="Radio2" value="2" onclick="checkValue(value)">
+                                            <label class="form-check-label text-capitalize " for="Radio3">
+                                                <span id="q2"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input radd " type="radio" name="exampleRadios"
+                                                id="Radio3" value="3" onclick="checkValue(value)">
+                                            <label class="form-check-label text-capitalize " for="Radio4">
+                                                <span id="q3"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <a  class="btn btn-primary" id="submit">Submit<i class="em em-crossed_fingers"
+                                <a class="btn btn-primary" id="submit">Submit<i class="em em-crossed_fingers"
                                         aria-role="presentation"
                                         aria-label="HAND WITH INDEX AND MIDDLE FINGERS CROSSED"></i></a>
                             </div>
