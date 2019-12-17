@@ -63,50 +63,50 @@ var questions = [
     },
     {
         title: '3',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
-        answer: 1,
+        question: "Who does Birdperson marry?",
+        choices: ["Paula", "Sherhonda", "Tammy", "Beth"],
+        answer: 2,
     },
     {
         title: '4',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
-        answer: 1,
+        question: "Hungry... For... ____?",
+        choices: ["Apples", "Milk", "Jello", "Cookies"],
+        answer: 0,
     },
     {
         title: '5',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
-        answer: 1,
+        question: "Whose body housed anatomy park?",
+        choices: ["Stan", "Jerry", "BirdPerson", "Rubin"],
+        answer: 3,
     },
     {
         title: '6',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
+        question: "Which McDonalds item made a comeback from Rick's flashback?",
+        choices: ["McBLT", "Szechuan sauce", "McRib", "McFlurry"],
         answer: 1,
     },
     {
         title: '7',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
-        answer: 1,
+        question: "Who does Beth shoot thinking they are a parasite?",
+        choices: ["Mr. PoopyButthole", "Big Chungus", "Photography Raptor", "Mr. Beauregard"],
+        answer: 0,
     },
     {
         title: '8',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
-        answer: 1,
+        question: "Whcih member of the Vindicators is half cold, unfeeling reptile and half cold, equally as unfeeling machine?",
+        choices: ["Vance Maximus", "Million Ants", "Crocubot", "Alan Rails"],
+        answer: 2,
     },
     {
         title: '9',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
-        answer: 1,
+        question: "What song does Rick and Morty sing to win the intergalactic musical competition?",
+        choices: ["Get Shwifty", "We Are The Champions", "Funky Town", "Palmdale"],
+        answer: 0,
     },
     {
         title: '10',
-        question: "What is the name of Morty's crush?",
-        choices: ["Annie", "Jessica", "Summer", "Heather"],
+        question: "Which species feels more pain the longer they're alive?",
+        choices: ["Humans", "Meeseeks", "Gazorpazorps", "Cronenbergs"],
         answer: 1,
     },
 
@@ -133,6 +133,13 @@ function checkValue(value) {
 subButton.addEventListener("click", function (e) {
     if (answerQuestion === undefined) {
         answerQuestion = 0
+    }
+    var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
+    if (answerQuestion == questions[(currentQuestion-1)].answer) {
+        alert('you got it right!')
+    }
+    else if (answerQuestion != questions[(currentQuestion-1).answer]) {
+        alert('nah that aint right')
     }
     getNext()
     console.log(answerQuestion)
