@@ -16,6 +16,10 @@ var cardDisplay = document.getElementById('cardDisplay')
 var checkMe = document.getElementById('checkMe')
 var currQ
 var subButton = document.getElementById('submit')
+var win = document.getElementById('win')
+var lose = document.getElementById('lose')
+var loseDisplay = document.getElementById('lose-hide')
+var total = 0
 
 
 // INITIAL FUNCTION
@@ -112,13 +116,10 @@ var questions = [
 
 
 ];
+
 function getQuiz() {
-    //plug info into one card and have info loop through after submit is clicked. 
-    //how to have info loop through
     currQ = questions[0]
     displayNext()
-
-
 }
 
 
@@ -128,28 +129,6 @@ var answerQuestion;
 function checkValue(value) {
     answerQuestion = value
 }
-
-
-subButton.addEventListener("click", function (e) {
-    if (answerQuestion === undefined) {
-        answerQuestion = 0
-    }
-    var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
-    if (answerQuestion == questions[(currentQuestion-1)].answer) {
-        alert('you got it right!')
-    }
-    else if (answerQuestion != questions[(currentQuestion-1).answer]) {
-        alert('nah that aint right')
-    }
-    getNext()
-    console.log(answerQuestion)
-    // check(e)
-
-    // CHECKBOX ONCLICKS //
-
-
-});
-
 function displayNext() {
     questionTitle.innerHTML = currQ.title
     cardQuestion.innerHTML = currQ.question
@@ -158,6 +137,49 @@ function displayNext() {
     q2.innerHTML = currQ.choices[2]
     q3.innerHTML = currQ.choices[3]
 }
+
+
+
+subButton.addEventListener("click", function (e) {
+    if (answerQuestion === undefined) {
+        answerQuestion = 0
+    }
+    var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
+    if (answerQuestion == questions[(currentQuestion - 1)].answer) {
+        console.log('you got it right!')
+    }
+    else if (answerQuestion != questions[(currentQuestion - 1).answer]) {
+        console.log('nah that aint right')
+        display.setAttribute('style', "display: none");
+        document.getElementById('cardDisplay').setAttribute('style', "display: none")
+        lose.setAttribute('style', 'display: show')
+        setTimeout(function () {
+            var i = seconds.innerHTML;
+            console.log(i)
+            display.setAttribute('style', "display: show");
+            document.getElementById('cardDisplay').setAttribute('style', "display: show")
+            lose.setAttribute('style', 'display: none')
+
+
+
+
+        }, 3000);
+
+    }
+
+
+    getNext()
+    console.log(answerQuestion)
+    // check(e)
+
+    // CHECKBOX ONCLICKS //
+
+})
+
+
+
+
+
 
 
 function getNext() {
@@ -212,67 +234,3 @@ function getNext() {
 
 init()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     // console.log(questions[i].q1.choices[2])
-
-
-        //create a card dynamically-
-
-        //         var content =
-        //             ` 
-        //         <div class="qDiv" >
-        //             <div class="card mb-4 col-12">
-        //     <div class="card-header text-capitalize">
-        //         Question ${questions[i].title}
-        //     </div>
-        //     <div class="card-body text-center text-capitalize">
-        //         <h5 class="card-title">${questions[i].question}</h5>
-
-
-        //         <div class="col-sm-12   text-justify" >
-        //         <div class="form-check ">
-        //         <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="0" checked>
-        //         <label class="form-check-label text-capitalize " for="exampleRadios1">
-        //           ${questions[i].choices[0]}
-        //         </label>
-        //         </div>
-        //          <div class="form-check ">
-        //         <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="1" checked>
-        //         <label class="form-check-label text-capitalize " for="exampleRadios1">
-        //           ${questions[i].choices[1]}
-        //         </label>
-        //         </div>
-        //          <div class="form-check ">
-        //         <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="2" checked>
-        //         <label class="form-check-label text-capitalize " for="exampleRadios1">
-        //           ${questions[i].choices[2]}
-        //         </label>
-        //         </div>
-        //          <div class="form-check ">
-        //         <input class="form-check-input " type="radio" name="exampleRadios" id="exampleRadios1" value="3" checked>
-        //         <label class="form-check-label text-capitalize " for="exampleRadios1">
-        //           ${questions[i].choices[3]}
-        //         </label>
-        //         </div>
-        //     </div>
-        //         <a onClick="check()" class="btn btn-primary">Submit<i class="em em-crossed_fingers" aria-role="presentation" aria-label="HAND WITH INDEX AND MIDDLE FINGERS CROSSED"></i></a>
-        //     </div>
-        // </div> 
-        // </div>`
-
-        // console.log(content)
-
-        //         cardDisplay.innerHTML = content
