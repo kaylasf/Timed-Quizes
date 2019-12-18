@@ -44,10 +44,23 @@
                 <div class="row" id="lose-hide">
                     <div class="col-12">
                         <h1 class="display-4">Timed Quizes </h1>
-                        <div> <span id="lose" style="display: none;">
-                                <h1 style="color: red;"> WRONG </h1>
-                                <img id="wrong" src="../images/boo.jpg" style=" padding: 5px;" alt="BOO">
-                            </span></div>
+                        <div id="lose" style="display: none;">
+
+                            <h1 style="color: red;"> WRONG </h1>
+                            <img id="wrong" src="../images/boo.jpg" style=" padding: 5px;" alt="BOO">
+
+                        </div>
+                        <div id="total" style="display: none;">
+                            <h1 class="display4">Total Score: <span id="userTotal">/10</span> </h1>
+                            <div class="input-group mb-5 pb-3 w-50 m-auto">
+                                <input id='userInput' type="text" class="form-control" placeholder="Recipient's Username"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="button-addon2">Button</button>
+                                </div>
+                            </div>
+                        </div>
 
 
                         <div class="card mb-4 col-12 " id='cardDisplay'>

@@ -22,6 +22,15 @@ var loseDisplay = document.getElementById('lose-hide')
 var total = 0
 var boo = document.getElementById('wrong')
 var yey = document.getElementById('winning')
+
+// TOP SCORE VARIABLES
+var userBtn = document.getElementById('button-addon2')
+var userInput = document.getElementById('userInput')
+
+
+
+
+
 // INITIAL FUNCTION
 // START TIMER AND DISPLAY QUIZ
 function init() {
@@ -117,6 +126,10 @@ var questions = [
         choices: ["Humans", "Meeseeks", "Gazorpazorps", "Cronenbergs"],
         answer: 1,
     },
+    {
+        title: '11',
+
+    },
 
 
 ];
@@ -133,6 +146,7 @@ var answerQuestion;
 function checkValue(value) {
     answerQuestion = value
 }
+
 function displayNext() {
     questionTitle.innerHTML = currQ.title
     cardQuestion.innerHTML = currQ.question
@@ -142,23 +156,43 @@ function displayNext() {
     q3.innerHTML = currQ.choices[3]
 }
 
+userBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+    console.log(total)
+    localStorage.setItem("User", userInput.value);
 
+    localStorage.setItem("Score", total);
+})
 
 subButton.addEventListener("click", function (e) {
     if (answerQuestion === undefined) {
         answerQuestion = 0
     }
+
     var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
+    console.log(currentQuestion)
+
+    if (currentQuestion === 2) {
+        document.getElementById('cardDisplay').setAttribute('style', "display: none")
+        document.getElementById('total').setAttribute('style', "display: show")
+        document.getElementById('userTotal').innerHTML = total
+
+    }
+
     if (answerQuestion == questions[(currentQuestion - 1)].answer) {
-        console.log('you got it right!')
+
         win.setAttribute('style', 'display: show')
         yey.setAttribute('src', randomPic(yay))
         total++
+        console.log('you got it right!' + total)
         setTimeout(function () {
             win.setAttribute('style', 'display: none')
         }, 2000);
 
     }
+
+
+
     else if (answerQuestion != questions[(currentQuestion - 1).answer]) {
         console.log('nah that aint right')
         display.setAttribute('style', "display: none");
@@ -231,6 +265,10 @@ function getNext() {
             break;
         case currQ = questions[9]:
             currQ = questions[10]
+            displayNext()
+            break;
+        case currQ = questions[10]:
+            currQ = questions[11]
             displayNext()
             break;
         default:
