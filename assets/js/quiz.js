@@ -20,7 +20,7 @@ var win = document.getElementById('win')
 var lose = document.getElementById('lose')
 var loseDisplay = document.getElementById('lose-hide')
 var total = 0
-
+var boo = document.getElementById('wrong')
 
 // INITIAL FUNCTION
 // START TIMER AND DISPLAY QUIZ
@@ -29,9 +29,11 @@ function init() {
     isQuizing = true
     countdown()
     getQuiz()
-
-
 }
+
+var ranPic = ["../images/boo2.jpg",'../images/boo2.jpg','../images/boo3.jpg','../images/boo4.jpg','../images/boo5.jpg','../images/boo6.jpg', '../images/boo7.jpg'
+]
+
 
 function countdown() {
     var i = 75;
@@ -159,7 +161,8 @@ subButton.addEventListener("click", function (e) {
             display.setAttribute('style', "display: show");
             document.getElementById('cardDisplay').setAttribute('style', "display: show")
             lose.setAttribute('style', 'display: none')
-
+            ranI= Math.random(ranPic)
+            boo.setAttribute('src',randomPic(ranPic) )
 
 
 
@@ -169,15 +172,15 @@ subButton.addEventListener("click", function (e) {
 
 
     getNext()
-    console.log(answerQuestion)
-    // check(e)
-
-    // CHECKBOX ONCLICKS //
 
 })
 
-
-
+function randomPic(items)
+{
+  
+return items[Math.floor(Math.random()*items.length)];
+     
+}
 
 
 
