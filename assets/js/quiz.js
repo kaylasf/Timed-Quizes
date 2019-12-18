@@ -21,7 +21,7 @@ var lose = document.getElementById('lose')
 var loseDisplay = document.getElementById('lose-hide')
 var total = 0
 var boo = document.getElementById('wrong')
-
+var yey = document.getElementById('winning')
 // INITIAL FUNCTION
 // START TIMER AND DISPLAY QUIZ
 function init() {
@@ -31,7 +31,9 @@ function init() {
     getQuiz()
 }
 
-var ranPic = ["../images/boo2.jpg",'../images/boo2.jpg','../images/boo3.jpg','../images/boo4.jpg','../images/boo5.jpg','../images/boo6.jpg', '../images/boo7.jpg'
+var ranPic = ["../images/boo1.jpg", '../images/boo2.jpg', '../images/boo3.jpg', '../images/boo4.jpg', '../images/boo5.jpg', '../images/boo6.jpg', '../images/boo7.jpg'
+]
+var yay = ["../images/yay2.jpg", '../images/yay2.jpg', '../images/yay3.jpg', '../images/yay4.jpg', '../images/yay5.jpg', '../images/yay6.jpg', '../images/yay7.jpg'
 ]
 
 
@@ -149,6 +151,13 @@ subButton.addEventListener("click", function (e) {
     var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
     if (answerQuestion == questions[(currentQuestion - 1)].answer) {
         console.log('you got it right!')
+        win.setAttribute('style', 'display: show')
+        yey.setAttribute('src', randomPic(yay))
+        total++
+        setTimeout(function () {
+            win.setAttribute('style', 'display: none')
+        }, 2000);
+
     }
     else if (answerQuestion != questions[(currentQuestion - 1).answer]) {
         console.log('nah that aint right')
@@ -161,10 +170,8 @@ subButton.addEventListener("click", function (e) {
             display.setAttribute('style', "display: show");
             document.getElementById('cardDisplay').setAttribute('style', "display: show")
             lose.setAttribute('style', 'display: none')
-            ranI= Math.random(ranPic)
-            boo.setAttribute('src',randomPic(ranPic) )
-
-
+            ranI = Math.random(ranPic)
+            boo.setAttribute('src', randomPic(ranPic))
 
         }, 3000);
 
@@ -175,11 +182,10 @@ subButton.addEventListener("click", function (e) {
 
 })
 
-function randomPic(items)
-{
-  
-return items[Math.floor(Math.random()*items.length)];
-     
+function randomPic(items) {
+
+    return items[Math.floor(Math.random() * items.length)];
+
 }
 
 
