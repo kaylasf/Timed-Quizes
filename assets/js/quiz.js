@@ -26,7 +26,7 @@ var yey = document.getElementById('winning')
 // TOP SCORE VARIABLES
 var userBtn = document.getElementById('button-addon2')
 var userInput = document.getElementById('userInput')
-
+var navie = document.getElementById('nav')
 
 
 
@@ -160,8 +160,8 @@ userBtn.addEventListener('click', function (e) {
     e.preventDefault()
     console.log(total)
     localStorage.setItem("User", userInput.value);
-
     localStorage.setItem("Score", total);
+    
 })
 
 subButton.addEventListener("click", function (e) {
@@ -172,11 +172,15 @@ subButton.addEventListener("click", function (e) {
     var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
     console.log(currentQuestion)
 
-    if (currentQuestion === 2) {
+    if (currentQuestion == 10) {
         document.getElementById('cardDisplay').setAttribute('style', "display: none")
         document.getElementById('total').setAttribute('style', "display: show")
         document.getElementById('userTotal').innerHTML = total
+        navie.setAttribute('style', "display:show")
 
+        var endTime = seconds.innerHTML
+        localStorage.setItem("Time", endTime);
+        // console.log(endTime)
     }
 
     if (answerQuestion == questions[(currentQuestion - 1)].answer) {
@@ -185,6 +189,7 @@ subButton.addEventListener("click", function (e) {
         yey.setAttribute('src', randomPic(yay))
         total++
         console.log('you got it right!' + total)
+
         setTimeout(function () {
             win.setAttribute('style', 'display: none')
         }, 2000);
@@ -267,12 +272,9 @@ function getNext() {
             currQ = questions[10]
             displayNext()
             break;
-        case currQ = questions[10]:
-            currQ = questions[11]
-            displayNext()
-            break;
         default:
             document.getElementById('cardDisplay').setAttribute('style', "display: none");
+            
     }
 }
 
