@@ -126,10 +126,7 @@ var questions = [
         choices: ["Humans", "Meeseeks", "Gazorpazorps", "Cronenbergs"],
         answer: 1,
     },
-    {
-        title: '11',
 
-    },
 
 
 ];
@@ -161,7 +158,10 @@ userBtn.addEventListener('click', function (e) {
     console.log(total)
     localStorage.setItem("User", userInput.value);
     localStorage.setItem("Score", total);
-    
+    userBtn.setAttribute('style', 'display: none')
+    userInput.setAttribute('style', 'display: none')
+    document.getElementById('goSee').setAttribute('style', 'display: show')
+
 })
 
 subButton.addEventListener("click", function (e) {
@@ -172,11 +172,13 @@ subButton.addEventListener("click", function (e) {
     var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
     console.log(currentQuestion)
 
-    if (currentQuestion == 10) {
+    if (currentQuestion == 2) {
         document.getElementById('cardDisplay').setAttribute('style', "display: none")
         document.getElementById('total').setAttribute('style', "display: show")
-        document.getElementById('userTotal').innerHTML = total
+        // document.getElementById('userTotal').innerHTML = total
         navie.setAttribute('style', "display:show")
+        display.setAttribute('style', "display: none");
+
 
         var endTime = seconds.innerHTML
         localStorage.setItem("Time", endTime);
@@ -274,7 +276,7 @@ function getNext() {
             break;
         default:
             document.getElementById('cardDisplay').setAttribute('style', "display: none");
-            
+
     }
 }
 
