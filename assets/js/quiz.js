@@ -172,7 +172,7 @@ subButton.addEventListener("click", function (e) {
     var currentQuestion = parseInt(document.getElementById('question-title').innerHTML)
     console.log(currentQuestion)
 
-    if (currentQuestion == 2) {
+    if (currentQuestion == 10) {
         document.getElementById('cardDisplay').setAttribute('style', "display: none")
         document.getElementById('total').setAttribute('style', "display: show")
         // document.getElementById('userTotal').innerHTML = total
