@@ -47,7 +47,7 @@ var yay = ["../images/yay2.jpg", '../images/yay2.jpg', '../images/yay3.jpg', '..
 
 
 function countdown() {
-    var i = 75;
+    var i = 2;
 
     // This block will be executed 100 times.
     setInterval(function () {
@@ -56,6 +56,9 @@ function countdown() {
             display.setAttribute('style', "display: none");
             timesUp.setAttribute('style', "display: show");
             document.getElementById('cardDisplay').setAttribute('style', "display: none")
+            document.getElementById('total').setAttribute('style', "display: show")
+            navie.setAttribute('style', "display:show")
+
             //display score, option for highscores, play again. 
 
         }
