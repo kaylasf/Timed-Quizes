@@ -47,7 +47,7 @@ var yay = ["../images/yay2.jpg", '../images/yay2.jpg', '../images/yay3.jpg', '..
 
 
 function countdown() {
-    var i = 2;
+    var i = 80;
 
     // This block will be executed 100 times.
     setInterval(function () {
