@@ -1,3 +1,12 @@
-body{
+/* body{
     background-color: #292929;
+} */
+#logo{
+    height: 75px;
+    width: 300px;
+    
+}
+img{
+    height: 75px;
+    width: 300px;
 }

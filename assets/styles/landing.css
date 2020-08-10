@@ -13,11 +13,25 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 a:hover{
-  color:#36ae44 ;
+  color:transparent ;
+  /* HOVER PICKLE RICK */
+  /* background-image:url('../images/pickleRickle.png') ;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-position: center; */
+  
+}
+.letsgooo:hover{
+  color:transparent ;
+  /* HOVER PICKLE RICK */
+  background-image:url('../images/pickleRickle.png') ;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-position: center;
 }
 #wrapper{
   width:100vw;
-  height:100vh;
+  height:50vh;
   box-sizing:border-box;
   display:flex;
   align-items:center;
@@ -26,7 +40,7 @@ a:hover{
 .my-super-cool-btn{
   position:relative;
   text-decoration:none;
-  color:#fff;
+  color:#92cc4d;
   letter-spacing:1px;
   font-size:2rem;
   box-sizing:border-box;
@@ -47,7 +61,7 @@ a:hover{
   display:block;
   position:absolute;
   border-radius:100%;
-  border:7px solid #6ec511;
+  border:7px solid #92cc4d;
   box-sizing:border-box;
   transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
   box-shadow: 0 30px 85px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
@@ -65,7 +79,7 @@ a:hover{
   width:8px;
   height:8px;
   display:block;
-  background-color:#6ec511;
+  background-color:#92cc4d;
   border-radius:100%;
   position:absolute;
   transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
