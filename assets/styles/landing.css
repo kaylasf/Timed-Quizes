@@ -31,7 +31,7 @@ a:hover{
 }
 #wrapper{
   width:100vw;
-  height:50vh;
+  height:75vh;
   box-sizing:border-box;
   display:flex;
   align-items:center;

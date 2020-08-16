@@ -14,19 +14,19 @@
 
 <body>
     <nav class="navbar navbar-dark bg-transparent" style="visibility:hidden" id="nav">
-        <a class="navbar-brand" href="./highscores.html"  > Scores</a>
+        <a class="navbar-brand" href="./highscores.html" > Scores</a>
     </nav>
 
 
-    <div class="container-fluid mainContainer w-100 h-100">
+    <div class="container-fluid mainContainer w-100 h-100" >
 
 
 
-        <div class="jumbotron text-center w-100 h-100 p-0 mb-5">
+        <div class="jumbotron text-center w-100 h-100 p-0 mb-5 theJumbo textMe">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="lead text-right" id="remaining">Time Remaining: <span id="time-remaining">75</span>
+                        <h1 class="lead text-right textMe" id="remaining">Time Remaining: <span id="time-remaining">75</span>
                         </h1>
 
                     </div>
@@ -34,7 +34,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="bold text-right" id="timesUp" style="display: none;">Time's Up!</h1>
+                        <h1 class="bold text-right textMe" id="timesUp" style="display: none;">Time's Up!</h1>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                 <!-- TITLE -->
                 <div class="row" id="lose-hide">
                     <div class="col-12">
-                        <h1 class="display-4">Timed Quizes </h1>
+                        <h1 class="display-4 textMe">Timed Quizes </h1>
                         <div id="lose" style="display: none;">
 
                             <h1 style="color: red;"> WRONG </h1>
@@ -51,25 +51,25 @@
 
                         </div>
                         <div id="total" style="display: none;">
-                            <h1 class="display4" id="goSee" style="display: none;">Go see your Score!</h1>
-                            <div class="input-group mb-5 pb-3 w-50 m-auto">
-                                <input id='userInput' type="text" class="form-control" placeholder=" Username"
+                            <h1 class="display4 " id="goSee" style="display: none;"><a href="./highscores.html " >Go see your Score!</a></h1>
+                            <div class="input-group textMe mb-5 pb-3 w-50 m-auto">
+                                <input id='userInput' type="text" class="form-control textMe" placeholder=" Username"
                                     aria-label=" username" aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="button-addon2"><a href="./highscores.html" ></a> Post</button>
+                                    <button class="btn btn-outline-secondary textMe" type="button"
+                                        id="button-addon2"><a href="./highscores.html " ></a> Post</button>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="card mb-4 col-12 " id='cardDisplay'>
+                        <div class="card mb-4 col-12 p-0 " id='cardDisplay'>
 
 
-                            <div class="card-header text-capitalize">
+                            <div class="w-100 card-header text-capitalize textMe">
                                 Question <span id="question-title"></span>
                             </div>
-                            <div class="card-body text-center text-capitalize">
+                            <div class="card-body text-center text-capitalize textMe">
                                 <h5 class="card-title"><span id="card-question"></span></h5>
 
 

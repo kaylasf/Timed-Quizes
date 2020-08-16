@@ -1,12 +1,69 @@
-/* body{
-    background-color: #292929;
-} */
+body{
+    background-color:#292929;
+}
 #logo{
     height: 75px;
     width: 300px;
     
 }
-img{
+#pickleRick{
     height: 75px;
     width: 300px;
+}
+.mainContainer{
+padding: 0;
+background-color:#292929;
+
+
+}
+.theJumbo{
+    background-color:#292929;
+
+
+}
+@font-face {
+    font-family: SOTF;
+    src: url(../font/get_schwifty.ttf);
+    
+  }
+   @font-face {
+    font-family: lemon;
+    src: url(../font/LEMONMILK-Light.otf);
+    
+  }
+  .txtmeee{
+    font-family: 'SOTF';
+      
+  }
+ 
+.textMe{
+    color: white;
+    font-family: 'lemon';
+}
+#cardDisplay{
+    background-color:#69785a
+
+
+}
+.card-header{
+    background-color:#42512e ;
+}
+#userInput {
+    background-color:#292929;
+    color: white;
+}
+#button-addon2{
+    background-color:#42512e ;
+}
+a{
+  color:#69785a;
+  text-decoration: none;
+  
+
+}
+a:hover{
+  color:#42512e ;
+  text-decoration: none;
+
+ 
 }
