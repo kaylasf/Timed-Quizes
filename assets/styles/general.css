@@ -1,5 +1,6 @@
 body{
-    background-color:#292929;
+    /* background-color:#292929; */
+    background-color:black;
 }
 #logo{
     height: 75px;
@@ -17,7 +18,8 @@ background-color:#292929;
 
 }
 .theJumbo{
-    background-color:#292929;
+    /* background-color:#292929; */
+    background-color:black;
 
 
 }
@@ -41,12 +43,13 @@ background-color:#292929;
     font-family: 'lemon';
 }
 #cardDisplay{
-    background-color:#69785a
+    background-color:#2d2d2d
 
 
 }
 .card-header{
-    background-color:#42512e ;
+    background-color:#1f1f1f;
+    
 }
 #userInput {
     background-color:#292929;
